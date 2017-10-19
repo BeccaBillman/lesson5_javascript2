@@ -4,20 +4,20 @@
 Web Application Development
 
 ### Assignment Date:  
-(Month Day, Year)
+(October 20,2017)
 
 ### Student Name:  
-(First and Last Name)
+(Becca Billman)
 
 ### Project Description:
-(In your own words, briefly describe the assignment.)
+(Create a working calculator for people to use to find what their income tax was or would be.)
 
 ### View Project:
 (Replace this statement with your Github Page URL that was created when you 
  published the project.)
 
 ### Lessons Learned in the Assignment:
-1. (Briefly describe a lesson/concept learned in this lesson.)
-2. (Briefly describe a lesson/concept learned in this lesson.)
-3. (Briefly describe a lesson/concept learned in this lesson.)
+1. (I learned how add more than one subdivision)
+2. (I learned how to make it clear on the web page .)
+3. (I learned how to use document.getElementById.)
 
