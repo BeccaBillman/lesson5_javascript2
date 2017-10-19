@@ -72,10 +72,54 @@ function calculateTax(){
            
           else if(status == 1) {
                 //INSERT YOUR CODE BELOW
-  
-  
-  
-  
+   var tax; //the tax calculated based on the filing status and income
+         var taxRate; //the tax rate (bracket) based on the filing status and income
+         
+         //Retrieve the values the user enters and selects on the form
+         var income = document.getElementById("incomeInput").value;
+         var status = document.getElementById("filingStatus").value;
+         
+         
+         //Calculate the tax amount and tax rate based on the filing status and income
+         //0-Single, 1-Married Jointly, 2-Married Separately, and 3-Head of Household
+
+        if (status == 1) { 
+             // Compute tax for Married Jointly filers
+               if (income <= 9275){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 37650) {
+                 tax = 9275 * 0.10 + (income - 9275) * 0.15;
+                 taxRate = 15;
+               }//end of else if
+               else if (income <= 91150) {
+                 tax = 9275 * 0.10 + (37650 - 9275) * 0.15 + (income - 37650) * 0.25;
+                 taxRate = 25;
+               } //end of else if
+               else if (income <= 190150) {
+                 tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                       (91150 - 37650) * 0.25 + (income - 91150) * 0.28;
+                 taxRate = 28;
+               }//end of else if
+               else if (income <= 413350) {
+                 tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                       (91150 - 37650) * 0.25 + (190150 - 91150) * 0.28 +
+                       (income - 190150) * 0.33;
+                 taxRate = 33;
+               }//end of else if
+               else if (income <= 415050) {
+                  tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                        (91150 - 37650) * 0.25 + (190150 - 91150) * 0.28 +
+                        (413350 - 190150) * 0.33 + (income - 413350) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                        (91150 - 37650) * 0.25 + (190150 - 91150) * 0.28 +
+                        (413350 - 190150) * 0.33 + (415050 - 413350 ) * 0.35 + (income - 415050) * .396;
+                  taxRate = 39.6;
+               }//end of nested if
           }//end of married file jointly calculation
           
           
@@ -93,10 +137,54 @@ function calculateTax(){
                  
           else if(status == 2) {
                 //INSERT YOUR CODE BELOW
+ var tax; //the tax calculated based on the filing status and income
+         var taxRate; //the tax rate (bracket) based on the filing status and income
+         
+         //Retrieve the values the user enters and selects on the form
+         var income = document.getElementById("incomeInput").value;
+         var status = document.getElementById("filingStatus").value;
+         
+         
+         //Calculate the tax amount and tax rate based on the filing status and income
+         //0-Single, 1-Married Jointly, 2-Married Separately, and 3-Head of Household
 
-             
-             
-             
+        if (status == 2) { 
+             // Compute tax for Married Separately filers
+               if (income <= 9275){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 37650) {
+                 tax = 9275 * 0.10 + (income - 9275) * 0.15;
+                 taxRate = 15;
+               }//end of else if
+               else if (income <= 91150) {
+                 tax = 9275 * 0.10 + (37650 - 9275) * 0.15 + (income - 37650) * 0.25;
+                 taxRate = 25;
+               } //end of else if
+               else if (income <= 190150) {
+                 tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                       (91150 - 37650) * 0.25 + (income - 91150) * 0.28;
+                 taxRate = 28;
+               }//end of else if
+               else if (income <= 413350) {
+                 tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                       (91150 - 37650) * 0.25 + (190150 - 91150) * 0.28 +
+                       (income - 190150) * 0.33;
+                 taxRate = 33;
+               }//end of else if
+               else if (income <= 415050) {
+                  tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                        (91150 - 37650) * 0.25 + (190150 - 91150) * 0.28 +
+                        (413350 - 190150) * 0.33 + (income - 413350) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                        (91150 - 37650) * 0.25 + (190150 - 91150) * 0.28 +
+                        (413350 - 190150) * 0.33 + (415050 - 413350 ) * 0.35 + (income - 415050) * .396;
+                  taxRate = 39.6;
+               }//end of nested if
           }//end of married file separately calculation
         
         
@@ -114,10 +202,54 @@ function calculateTax(){
           
           else if(status == 3) {
                 //INSERT YOUR CODE BELOW
- 
- 
+                 var tax; //the tax calculated based on the filing status and income
+         var taxRate; //the tax rate (bracket) based on the filing status and income
+         
+         //Retrieve the values the user enters and selects on the form
+         var income = document.getElementById("incomeInput").value;
+         var status = document.getElementById("filingStatus").value;
+         
+         
+         //Calculate the tax amount and tax rate based on the filing status and income
+         //0-Single, 1-Married Jointly, 2-Married Separately, and 3-Head of Household
 
-             
+        if (status == 0) { 
+             // Compute tax for Head of Household filers
+               if (income <= 9275){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 37650) {
+                 tax = 9275 * 0.10 + (income - 9275) * 0.15;
+                 taxRate = 15;
+               }//end of else if
+               else if (income <= 91150) {
+                 tax = 9275 * 0.10 + (37650 - 9275) * 0.15 + (income - 37650) * 0.25;
+                 taxRate = 25;
+               } //end of else if
+               else if (income <= 190150) {
+                 tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                       (91150 - 37650) * 0.25 + (income - 91150) * 0.28;
+                 taxRate = 28;
+               }//end of else if
+               else if (income <= 413350) {
+                 tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                       (91150 - 37650) * 0.25 + (190150 - 91150) * 0.28 +
+                       (income - 190150) * 0.33;
+                 taxRate = 33;
+               }//end of else if
+               else if (income <= 415050) {
+                  tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                        (91150 - 37650) * 0.25 + (190150 - 91150) * 0.28 +
+                        (413350 - 190150) * 0.33 + (income - 413350) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 9275 * 0.10 + (37650 - 9275) * 0.15 +
+                        (91150 - 37650) * 0.25 + (190150 - 91150) * 0.28 +
+                        (413350 - 190150) * 0.33 + (415050 - 413350 ) * 0.35 + (income - 415050) * .396;
+                  taxRate = 39.6;
+               }//end of nested if
           }//end of head of household calculation
           
           
@@ -174,9 +306,14 @@ function clearButton () {
               document.getElementById("filingStatus").selectedIndex = 0;
               
              //INSERT YOUR CODE BELOW
+             //This code resets the dropdown box to the "Married Jointly" filer status.
+              document.getElementById("filingStatus").selectedIndex = 1;
+              
+              //This code resets the dropdown box to the "Married Seperatly" filer status.
+              document.getElementById("filingStatus").selectedIndex = 2;
 
-
-
+              //This code resets the dropdown box to the "Head of Household" filer status.
+              document.getElementById("filingStatus").selectedIndex = 3;
 
 }//end of clearButton function
-      
+   
